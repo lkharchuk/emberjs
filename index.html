@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>STOP НБУ</title>
+	<meta charset="UTF-8"/>	
+	<link rel="stylesheet" href="/content/style.css"/>
+</head>
+<body>
+
+
+
+<script type="text/x-handlebars" id="application" class="main">
+	<header>
+		{{#linkTo "index"  class="title"}}<div class="icon-hands"><span class="red">НацБанк забрав у дітей садок!</span></div>{{/linkTo}}
+		<div class="subtitle"><span class="red">STOP</span> НБУ</div>
+	</header> 	  
+	
+	<nav>
+		{{#linkTo "index"}}Головна{{/linkTo}}
+		{{#linkTo "map"}}Ліко-Град{{/linkTo}}
+		{{#linkTo "costs"}}Кошти{{/linkTo}}
+		{{#linkTo "fight"}}Боротьба{{/linkTo}}		
+		{{#linkTo "kyivrada"}}Київрада{{/linkTo}}		
+		{{#linkTo "documents"}}Документи{{/linkTo}}			
+		{{#linkTo "events"}}Події{{/linkTo}}			
+		<a href="http://likolife.kiev.ua/Forum/Default.aspx?g=posts&t=456&p=47" target="_blank">Форум</a>	<!---->
+		<a {{action "showContact" bubbles=false}}>Контакти</a>		
+	</nav>
+	
+	
+	<main>
+		<section>
+			<article>
+				<div class="icon-papirus">
+					<blockquote>
+						Кажеш, стрику: Півень - сила, <br/>
+						Мав протекцію в Бурмила  <br/>
+						І в цариці в ласку вліз?  <br/>
+						То-то й є наш лад, нівроку:  <br/>
+						Без протекції ні кроку!  <br/>
+						Щоб вас божий грім розтріс! <br/> <br/>
+
+						Чи ти вчитель, чи фаховець,  <br/>
+						Чи урядник, промисловець,  <br/>
+						Чи поет, чи ремісник,  <br/>
+						Будь ти здібний, пильний дуже,-  <br/>
+						Без протекції, мій друже,  <br/>
+						За весь труд свій маєш шпик. <br/>
+						 <br/>
+						Ласка панська, вплив жіноцтва  <br/>
+						Вищі понад всі свідоцтва;  <br/>
+						Шепне слово пан барон,  <br/>
+						Чи прийде білет княгині,-  <br/>
+						Весь твій труд в одній хвилині  <br/>
+						В пил розсиплеться, мов сон.
+						<span class="footer">Іван Франко, 1890</span>
+					</blockquote>					
+				</div>
+				{{#if isShowContact}}
+				{{partial "index/contacts"}}
+				{{/if}}
+				
+				<!--<div class="icon-grass"></div>
+				<div class="icon-look"></div>
+				<div class="icon-bicycle"></div>
+				<div class="icon-grass-small"></div>
+				<div class="icon-light"></div>-->
+			</article>
+		</section>
+		<section>{{partial "index/info-1june"}}</section>				
+		<section>
+			<article>{{outlet}}</article>
+			<!--{{partial "index/voits"}}-->
+		</section>				
+	</main>
+	<br/><br/>
+	<footer>
+		<div class="counter">лічильник &nbsp;&nbsp;&nbsp;<span class="counter_org_ua">сьогодні [1]</span><span class="counter_org_ua">усього  [3]</span></div>
+		<script charset="utf-8" src="//yandex.st/share/share.js" type="text/javascript"></script>
+		<div class="yashare-auto-init"  data-yasharel10n="uk" data-yasharetype="link" data-yasharequickservices="vkontakte,facebook,twitter,odnoklassniki,moimir,lj,gplus"></div>		
+	</footer> 	
+</script>
+
+<script type="text/x-handlebars" id="index/_info">
+	<div class="cols2">		
+		<article class="col1">	
+			<div class="title">
+				ЗУПИНИМО ЗАБУДОВУ!
+				<div class="spacer"></div>
+				ВІДСТОЇМО САДОК! ЗАХИСТИМО ДІТЕЙ!
+			</div>	
+			{{#linkTo "costs"}}<div class="info round">{{title}}</div>{{/linkTo}}
+		</article>
+		<article class="col2 right action">	
+			<img {{bindAttr src="url"}} class="right" height="250"/>
+		</article>
+	</div>	
+</script>	
+
+<script type="text/x-handlebars" id="index/_info-1june">
+	{{#linkTo "fight"}}<div class="billet red">Чиновникам не потрібен садок, він потрібен дітям!</div>{{/linkTo}}	
+	<div class="cols2">		
+		<article class="col1">	
+			<div class="action"><div class="title">У День захисту дітей!</div>
+				<div class="title green">Приходьте всією сім'єю i захистіть свої права на дошкільну освіту та на обіцяну інфраструктуру</div>	
+				<div class="subtitle">Початок в 11:00, вул.Мейтуса</div>	
+				<div class="detail">Навпроти відділу продажу Ліко, тривалість 60-90хвилин</div>	
+				<div class="subtitle">У програмі:<br/> розваги, малюнки, музика, аніматори, ЗМІ</div>	
+			</div>	
+		</article>
+		<article class="col2 right action">	
+			{{#linkTo "fight"}}<div class="info round"><div>1</div><div class="subtitle">червня</div></div>{{/linkTo}}				
+			<img {{bindAttr src="url"}} class="right" height="250">
+		</article>
+	</div>
+</script>	
+  
+<script type="text/x-handlebars" id="index">
+	<div class="block-border">
+		<h2>Всі новини по темі, скандальні фотографії, правда і підтверджуючі документи в твоїх улюблених соцмережах та <a href="http://likolife.kiev.ua/Forum/Default.aspx?g=posts&t=456&p=47" target="_blank">форумі</a>. <br/>Заходь, лайкай, репости</h2>
+	</div>
+	<div class="icon-block">
+		<a target="_blank" href="http://www.facebook.com/stopnbu"><img src="/content/images/icons/facebook.jpg" width="80"/></a>
+		<a target="_blank" href="http://vk.com/stopnbu"><img src="/content/images/icons/vkontakte.jpg" width="80"/></a>
+		<a target="_blank" href="https://twitter.com/stopnbu"><img src="/content/images/icons/twitter.jpg" width="80"/>
+		<a target="_blank" href="http://www.odnoklassniki.ru/group/51820042977483"><img src="/content/images/icons/odnoklassniki.jpg" width="80"/></a> 
+		<a target="_blank" href="https://plus.google.com/u/0/communities/102752527264351053911"><img src="/content/images/icons/googleplus.jpg" width="80"/></a>		
+	</div>	
+	
+	<div class="blocks">
+		<div class="block-left">
+			<h2> Нам потрібні кошти на адвоката, листівки, акції</h2>
+			{{#linkTo "costs"}}<div class="billet radius3">Прийміть участь</div>{{/linkTo}}		
+		</div>
+		<div class="block-right">
+			<h2>Ми не здаємось<br/> і з Твоєю допомогою <br/>РАЗОМ переможемо, бо правда на нашому боці! </h2>
+		</div>
+	</div>
+	{{partial "index/skarga"}}
+</script>
+
+
+<script type="text/x-handlebars" id="index/_contacts">
+{{#view App.ContactView}}
+	<div id="Contacts">		
+		<div class="icon-contact"></div>
+		<div {{action "showContact"}} class="icon-close"></div>
+		<h3>ми на зв'язку </h3>
+		<a href="http://likolife.kiev.ua/Forum/Default.aspx?g=posts&t=456&p=47" target="_blank" class="blue">на форумі</a>	
+		<a href="mailto:mail@stopnbu.kiev.ua">mail@stopnbu.kiev.ua</a>
+		<a>телефон: 050 544 58 40</a>			
+	</div>
+{{/view}}	
+</script>	
+
+
+<script type="text/x-handlebars" id="index/_skarga">
+<div class="block-border"><h2> Звертайся в державні органи. Чим більше разів дана тема потрапить на очі чиновників, тим буде краще.   Не будь байдужим! <br>Знайди хвилинку для покращення власного житття! </h2></div>
+	
+    <div class="block-info">		
+		<h2>Київська міська державна адміністрація</h2>	
+		<div class="date">куди скаржитись</div>	
+		<ul class="icons">			
+			<li class="icon-contact">
+			 тел. стац.:  <b>1551</b><br/>
+			 тел. моб.:  <b>205-73-37</b><br/>
+			 тел. моб.:  <b>205-73-37</b><br/>
+			 е-пошта: <b><a href="mailto:info@1551.gov.ua">info@1551.gov.ua</a></b>		
+			</li>
+			<li class="icon-shedule">
+			<a href="http://kievcity.gov.ua/content/301_kerivnytstvom-strukturnykh-pidrozdiliv-kmda.html" target="_blank">Графік</a> проведення особистих прийомів, прямих "гарячих" телефонних ліній керівництвом структурних підрозділів Київської міської ради (Київської міської державної адміністрації)
+			</li>
+
+			<li class="icon-shedule">
+			<a href="http://kievcity.gov.ua/content/25_kerivnytstvom-kmda.html " target="_blank">Графік</a> проведення особистих та виїзних прийомів громадян і прямих "гарячих" телефонних ліній керівництвом Київської міської державної адміністрації на ІІ квартал 2013 року
+			</li>
+			</ul>
+	</div>
+	<div class="block-info">		
+		<h2>Столиця з Олександром Поповим</h2>	
+		<div class="date">куди скаржитись</div>	
+		<ul class="icons">			
+			<li class="icon-phone">
+				В ефірі: щопонеділка о 19.30 ТРК "КИЇВ"<br/>
+				Поставити свої запитання можна під час прямого ефіру<br/>
+				тел.: <b>(044) 223-09-71</b>				
+			</li>
+		</ul>
+	</div>
+	
+	<div class="block-info">		
+		<h2>Департамент управління освіти і науки  КМДА</h2>
+		<div class="date">куди скаржитись</div>	
+		<ul class="icons">			
+			<li class="icon-phone">			
+				Департамент управління освіти і науки виконавчого органу Київської міської державної адміністрації<br/>
+				тел.: <b>(044) 279-14-46	</b>	
+			</li>
+		</ul>
+	</div>
+	
+	<div class="block-info">		
+		<h2>Графік проведення особистого прийому громадян</h2>	
+		<div class="date">куди скаржитись</div>	
+		<ul class="icons">			
+			<li class="icon-shedule"><a href="http://www.guon.kiev.ua/?q=node/730" target="_blank">Графік</a> проведення особистого прийому громадян та прямих "гарячих" телефонних ліній керівництвом ГУОН</li>
+			<li class="icon-list"><a href="http://www.kmr.gov.ua/feedback.asp" target="_blank">Перелік</a> громадських приймалень депутатів Київради VI скликання</li>
+			<li class="icon-shedule"><a href="http://www.golosiiv.gov.ua/ua/618.htm" target="_blank">Графік</a> проведення особистого, виїзного прийому громадян та прямих "гарячих" телефонних ліній керівництвом
+			Голосіївської районної в місті Києві державної адміністрації на І квартал 2013 року </li>
+	</div>
+	
+	</script>	
+
+
+<script type="text/x-handlebars" id="map">
+	<h1>Соціальна інфраструктура району Ліко-Град</h1>
+	<h2>Тільки уяви собі в який дитячий садок чи школу будуть ходити твої діти, якщо замість цих знаків питання <span class=red><b>? ?</b></span> будуть висотки.
+		<br/><br/>Вже сьогодні все перезаповнено і не вистачае <span class=red><b>552</b></span> місця у дитячих садках. Подумай, що буде завтра, коли стане на повних 2 райони більше. Отож, не грабуй сам себе, не залишай своїх дітей без належного дитячого садочка та школи.
+		<br/><br/>На карті позначені садочки старого масиву, які вже на цей час перегружені, а також є один комерційний садок за ціною 4500грн на місяць.
+	</h2>
+   <div class="icon-map">
+	<div class="icon-question pulse">?</div>
+	<div class="icon-question pulse school">?</div>
+   </div>
+</script>
+
+<script type="text/x-handlebars" id="costs">
+	<h1>Кошти</h1>
+	<h2>Кошти потрібні для оплати адвоката, щоб подати позов до суду, листівки, акції. Обговорення на <a target="_blank" href="http://likolife.kiev.ua/Forum/Default.aspx?g=posts&t=800"> форумі по зібранню коштів</a>.</h2>
+	<div class="icon-moneybox">{{result}}</div>
+	<ol>
+		<li>
+			<dl>
+				<dt>Поповнити рахунок онлайн з системи <a href="https://liqpay.com/" target="_blank" title="liqpay.com" class="green">LiqPay</a> або <a href="https://privat24.ua" title="privat24.ua" target="_blank" class="green">ПриватБанку</a>:</dt>
+				<dt>одержувач: Воєводіна Зоя Юріївна </dt>
+				<dt>Рах. отримувача: 5211537436744127</dt>
+				<dt>Призначення платежу: для поповнення карти 5211537436744127, <br/>Воєводіна Зоя Юріївна, 3040816481</dt>
+			</dl>
+			
+			<blockquote>			
+				<a href="https://privat24.ua" title="privat24.ua" target="_blank" class="green"><div class="right icon-privat24"></div></a>
+				<a href="https://liqpay.com/" target="_blank" title="liqpay.com" class="green"><div class=" icon-liqpay"></div></a>		
+			</blockquote>	<div class="radius3 note">У приват24 не можна нічого видалити з історії, так що не вийде нічого приховати. </div>
+			<br/>
+		</li>
+		<li>
+			<dl>
+				<dt>для платежів з інших банків:</dt>
+				<dt>КОД ОКПО отримувача: 14360570</dt>
+				<dt>КОД ОКПО банку: 14360570, Установа банку: ПриватБанк, МФО банку: 305299</dt>
+				<dt>Рах. отримувача: 29244825509100</dt>
+			</dl>
+		</li>
+	</ol>
+	
+	<h1>Звіт</h1>
+	<b>Наші потреби:</b>
+	<blockquote>
+		адвокат - близько 8000 грн
+		<br/>листівки - близько 1000 грн
+		<br/>акціі - в процесі розробки
+	</blockquote>
+	<b>Отримали:</b>
+	
+	<ul id="CostsList">
+		{{#each model}}
+		<li><span class=date>{{format date}}</span> <span class=price>{{sum}} грн</span>  {{person}}{{#unless person}}&mdash;{{/unless}} </li>
+		{{/each}}
+	</ul>
+
+	<br>Результат, за станом на <span class=red>{{format lastDate}} <span class="billet radius3">{{result}} грн</span></span>
+	<br/><br/>
+	<b>Витратили:</b>
+	<br/><br/>тут ми будемо звітувати про кожну витрачену копійку
+</script>
+
+
+
+<script type="text/x-handlebars" id="fight">
+    <h1>Боротьба та події</h1>
+	Тільки у нас, Київська Міська Рада може надати Національному Банку України землю, заплановану для дитячого садочку, під забудову багатопоерхових будинків з екологічно небезпечним об'єктом (газова котельня) в районі, де щільність населення максимально досягнуто та в районі немає жодного державного садочку.
+	<br/><br/>
+	Жителі Теремків, район Лікоград, борються за дитячий садочок, який було заплановано при проектування 3-го мікрорайону Лікоград.
+	<h2>Усі звернення в держоргани, КМДА, депутатам, прокуратури нічого не дають. Ми отримуємо лише відписки і нічого більше. Нам це набридло, ми переходимо в наступ.</h2>
+	За дітей борються десятки активістів, сотні небайдужих людей, але малюкам необхідна Твоя підтримка і допомога тисяч простих людей, щоб змусити НБУ і гнилу систему чиновницького кумівства дотримуватися законів і права маленьких громадян.
+	<br/><br/>
+	Ми не здаємось і з Твоєю допомогою ми переможемо, бо правда на нашому боці! 
+	Бери приклда з нас, будь активним, твоє майбутнє та майбутнє твоїх дітей у твоїх руках!
+	<br/><br/>
+	<div class="note radius3">		
+		<a target="_blank" href="/content/docs/lustivka.pdf" class="radius3 right"><img height="130" border="0" align="middle" src="/content/images/lustivka.png"></a>
+		<blockquote>Ще є нагода допомогти нам!
+			<br>Роздрукуйте <a target="_blank" href="/content/docs/lustivka.pdf">листівку</a> і розповсюджуйте їх будь-якими можливими способами: 
+			передайте знайомим, залишайте у магазинах, у приймальнях, розклейте, просто роздайте перехожим...
+			<br>Надіємось на вашу допомогу!
+		</blockquote>		
+	</div>
+	
+	
+	<!--<div class="crop">
+	<table id="FightSteps">
+		<tr>
+			<td><h1>Запустили сайт</h1>20.06.2013</td>
+			<td>content 1 content 1content content 1content 1content 1content 1content 1content 1content 1content 11content 1content 1content 1content 1</td>
+		</tr>
+		<tr>
+			<td><h1>Київрада</h1>20.06.2013</td>
+			<td>content 1content 1content 1content 1content 1content 1content 1content 1content 1</td>
+		</tr>
+	</table>
+	</div>-->
+	<div class="block-info">		
+		<div class="date">01.06.2013 11:00</div>
+		<h2>Акція протесту: "Чиновникам не потрібен садок, він потрібен дітям!"</h2>	
+		<div class="icon-fight"></div>
+		<blockquote>
+					місце: вул.Мейтуса,  навпроти відділу продажу Ліко<br/>
+					тривалість:  60-90хвилин<br/>
+					програма: розваги, малюнки, музика, аніматори, ЗМІ
+		</blockquote>
+	</div>
+	<div class="block-info">		
+		<div class="date">25.04.2013</div>
+		<h2>Вийшла офлайн листівка</h2>	
+		<a href="/content/docs/lustivka-2.pdf" title="листівка" target="_blank"><div class="icon-pdf"></div></a>
+		<blockquote>
+					Щоб повідомити громадськість нашого району, ми розклеїли листівку в усіх будинках нашого району, а це 82 під'їзди.
+		</blockquote>
+	</div>
+	<div class="block-info">
+		<div class="date">10.04.2013</div>
+		<h2>Оновили сайт</h2>	
+		<div class="icon-process"></div>
+		
+		<blockquote>
+		Новий дизайн та контент сайту 
+		</blockquote>
+	</div>
+	
+</script>
+
+
+<script type="text/x-handlebars" id="kyivrada">
+	<h1>Київрада</h1>
+	<b>статистика голосування по фракціям </b>"Про надання земельної ділянки Національному банку України для будівництва, експлуатації та обслуговування житлових будинків з вбудованими приміщеннями та підземним паркінгом на вулиці Академіка Вільямса, 10 у Голосіївському районі", справа Д-3878.<br/><br/>	
+	За:
+	<blockquote>
+		Блок Леоніда Черновецького - 4
+		<br>Громадський актив Києва - 8
+		<br>Демократична партія України - 10
+		<br>Ініціатива - 8
+		<br>Народна Партія - 4
+		<br>Партія Регіонів - 8
+		<br>Позафракційні - 11
+		<br>Соціальна справедливість - 7
+		<br>Спортивний Київ - 4
+	</blockquote>
+	
+	Проти:
+	<blockquote>
+		Ініціатива -1
+		<br>УДАР -1
+		<br>Кияни - 1
+		<br>БЮТ - 3
+		<br>Республіка Київ - 1
+		<br>Столичні реформи - 1
+		<br>Відродження Києва - 1
+	</blockquote>
+	
+	<i>Прошу звернути увагу, що Шлапак А.В., голова комісії Київради з питань гуманітарної політики, голосувала ЗА, а Незнал О.Г., єкс-голова Голосіївської РДА, голосував Проти.</i>
+	<br/>
+	<p>Рішення ПРИЙНЯТЕ 121 73</p>
+	В голосуванні взяло участь:
+	<br/><br/>	
+	{{#each model}}
+		<b>{{title}} </b>({{len}})
+		<blockquote>	
+			{{deputates}}
+		  </blockquote>
+	{{/each}}			
+</script>
+
+
+<script type="text/x-handlebars" id="documents">
+	{{#each model}}
+		<h1>{{title}} </h1>
+		<div class="document-container">
+			<div class="icon-zoom"></div>
+			{{#each item in src}}						
+				<a {{action 'zoom' item}} class="zoom"><span></span><img {{bindAttr src="item"}} height="80"></a>
+			{{/each}}
+		</div>
+	{{/each}}		
+</script>
+
+<script type="text/x-handlebars" id="events">
+	<h1>Таймлайн по проблемі дитячого садочка</h1>
+
+	{{#each model}}
+		<div class="block-info"><a {{bindAttr name="date"}}></a>
+		<div class="date">{{date}}</div>
+		<h2>{{title}}</h2>			
+		<blockquote>{{text}}</blockquote>
+		</div>
+	{{/each}}	
+</script>
+
+<script type="text/x-handlebars" id="index/_voits">
+	<h1> Ви підете на мітинг?</h1>
+	<div class="survey_view">
+	  <form id="survey_form" action="http://simpoll.ru/run/post" method="post" enctype="multipart/form-data" name="survey_form">
+		<input type="hidden" name="survey_key" value="33f1f319" class="input" id="survey_key" /> <input type="hidden" name="page" value="1" class="input" id="page" />
+		<div class="survey_questions question q_view" id="q96809">
+		  <input type="hidden" class="type_alias" value="single" />
+		  <div class="number">
+			1
+		  </div>
+		  <div class="wrapper">
+			<h3>
+			  Ви підете на мітинг?
+			</h3>
+			<div class="body variants">
+			  <div class="variant">
+				<label><input type="radio" name="quest[96809]" value="247956" class="input_radio" id="247956" onclick="toggleFreeRadio(96809)" tabindex="-1" /> так</label>
+			  </div>
+			  <div class="variant">
+				<label><input type="radio" name="quest[96809]" value="247957" class="input_radio" id="247957" onclick="toggleFreeRadio(96809)" tabindex="-1" /> ні</label>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="survey_submit">
+		  <input type="submit" class="submit" value="Надіслати" />
+		</div>
+	  </form>
+	</div>
+
+	</script>
+	
+	<script type="text/javascript" src="/content/js/jquery.js"></script>
+	<script type="text/javascript" src="/content/js/handlebars.js"></script>
+	<script type="text/javascript" src="/content/js/ember.js"></script>	
+	<script type="text/javascript" src="/content/js/ember-data.js"></script>
+	<script type="text/javascript" src="/content/js/html5.js"></script>
+	<script type="text/javascript" src="/content/js/moment.min.js"></script>
+	<script type="text/javascript" src="/content/js/lang/uk.js"></script>
+	<script type="text/javascript" src="/content/js/app.js"></script>
+	<script type="text/javascript" src="http://counter.org.ua/counter.js"></script>
+  </body>
+</html>
